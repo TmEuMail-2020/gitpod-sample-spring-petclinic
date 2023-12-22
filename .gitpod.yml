@@ -41,8 +41,8 @@ jetbrains:
       - zielu.gittoolbox
       - com.kalessil.phpStorm.phpInspectionsEA
    # seems java (or intellij-idea ultimate) then okay? https://github.com/gitpod-samples/spring-petclinic/blob/master/.gitpod.yml#L22       
-     prebuilds:
-       version: both      
+    prebuilds:
+      version: both      
   phpstorm:
     plugins:
       - com.intellij.lang.jsgraphql
