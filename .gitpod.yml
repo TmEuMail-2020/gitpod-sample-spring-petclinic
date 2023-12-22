@@ -14,9 +14,50 @@ vscode:
     - pivotal.vscode-spring-boot
     - vscjava.vscode-java-pack
 
+
+# all branches to do prebuild
+github:
+  prebuilds:
+    branches: true 
+
+# enable useful plugins
 jetbrains:
   intellij:
     plugins:
-      - com.haulmont.jpab
-    prebuilds:
-      version: both
+      # enable php! 
+      - com.jetbrains.php
+      # need to duplicate from phpstorm... 
+      - com.intellij.lang.jsgraphql
+      - org.sonarlint.idea
+      # both can just client side! 
+      #- aws.toolkit
+      #- com.github.copilot
+      # bundled, so not needed
+      #- com.intellij.ml.llm
+      - com.sourcegraph.jetbrains
+      - com.github.lppedd.idea-conventional-commit
+      - de.php_perfect.intellij.ddev
+      #  inline blame not working on jetbrains client, but status bar still okay
+      - zielu.gittoolbox
+      - com.kalessil.phpStorm.phpInspectionsEA
+   # seems java (or intellij-idea ultimate) then okay? https://github.com/gitpod-samples/spring-petclinic/blob/master/.gitpod.yml#L22       
+   prebuilds:
+     version: both      
+  phpstorm:
+    plugins:
+      - com.intellij.lang.jsgraphql
+      - org.sonarlint.idea
+      # both can just client side! 
+      # - aws.toolkit
+      # - com.github.copilot
+      # bundled, so not needed
+      # - com.intellij.ml.llm
+      - com.sourcegraph.jetbrains
+      - com.github.lppedd.idea-conventional-commit
+      - de.php_perfect.intellij.ddev
+      # inline blame not working on jetbrains client, but status bar still okay
+      - zielu.gittoolbox
+      - com.kalessil.phpStorm.phpInspectionsEA
+   # phpstorm sometimes caused workspace with jetbrains not able to start, maybe only phpstorm? see above intellij for more info
+   # prebuilds:
+     # version: stable
