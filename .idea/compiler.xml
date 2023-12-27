@@ -9,6 +9,10 @@
         <module name="spring-petclinic" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="maven-tinker-no-parent" target="17" />
+      <module name="maven-with-parent" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

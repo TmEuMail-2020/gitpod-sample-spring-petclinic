@@ -1,0 +1,5 @@
+{
+  "require": {
+    "cake-cms/app": "<default>"
+  }
+}
